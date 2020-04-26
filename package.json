@@ -1,0 +1,23 @@
+{
+  "name": "jarvis",
+  "version": "1.0.0",
+  "description": "api auth",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luther-we/jarvis.git"
+  },
+  "keywords": [
+    "api",
+    "rest"
+  ],
+  "author": "Luther W.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luther-we/jarvis/issues"
+  },
+  "homepage": "https://github.com/Luther-we/jarvis#readme"
+}
