@@ -19,5 +19,17 @@
   "bugs": {
     "url": "https://github.com/Luther-we/jarvis/issues"
   },
-  "homepage": "https://github.com/Luther-we/jarvis#readme"
+  "homepage": "https://github.com/Luther-we/jarvis#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.10",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.3",
+    "path": "^0.12.7"
+  }
 }
