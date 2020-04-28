@@ -1,7 +1,7 @@
 const routesMap = {
   user: '/user',
   userLogin: '/login',
-  userSignUp: '/signup',
+  userSignUp: '/signin',
   userCheckEmail: '/checkemail'
 }
 

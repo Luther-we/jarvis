@@ -27,15 +27,12 @@ exports._sign_up = (req, res, next) => {
   console.log(req.body)
   User.find({email: req.body.email})
   .exec()
-  .then((doc) => { 
-    console.log('ici', doc)
+  .then((doc) => {
     if (doc.length >=1) {
-      console.log('ici', doc)
       res.status(409).json({
         message: 'This email exists '
       })
     } else {
-      console.log('là', doc)
       bcrypt.hash(req.body.password, 10, (err, hash) => {
         if (err) {
           return res.status(500).json({
@@ -50,11 +47,23 @@ exports._sign_up = (req, res, next) => {
         })
   
         user.save()
-        .then(result => {
+        .then(user => {
+          const token = jwt.sign({
+            email: user.email,
+            userId: user._id
+          }, process.env.JWT_KEY,
+          {
+            expiresIn: "1h"
+          },
+          )
+
           res.status(201).json({
             message: 'User create',
             status: 201,
-            result
+            user: {
+              email: user.email,
+              token: token
+            }
           })
         })
         .catch (err => {
